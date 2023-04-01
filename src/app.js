@@ -9,9 +9,9 @@ const livros = [
     {id: 4, "titulo": "Machado de Assis Contos"},
 ];
 
-get.app("/", (req, res) => res.status(200).send("Bem-vindo, esta é uma biblioteca dos meus livros favoritos!"));
+app.get("/", (req, res) => res.status(200).send("Bem-vindo, esta é uma biblioteca dos meus livros favoritos!"));
 
-get.app("/livros", (req, res) => {
+app.get("/livros", (req, res) => {
     res.status(200).json(livros)
 });
 
